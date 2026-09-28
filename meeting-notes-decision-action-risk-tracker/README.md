@@ -3,7 +3,7 @@
 A tool that turns raw meeting transcripts into a structured, running Excel tracker — decisions, owned action items with due dates, and flagged risks with mitigation plans — using Claude's API. Built as both a CLI script and a Streamlit UI, both feeding the same tracker file, with duplicate detection so re-discussing the same open item in a later meeting doesn't create a second entry for it.
 
 https://github.com/user-attachments/assets/f53650e2-1d5e-4475-b346-bf7084766099
-replace demo.gif with clickable video
+
 ## Why I built this
 
 For Process Optimization or Technical Delivery initiatives, a recurring time sink is turning meeting notes into clear, trackable follow-ups: who owns what, by when, and what risks need to be escalated — and keeping that up to date across a series of weekly syncs on the same project. This project automates that translation step using Claude, while keeping a human in the loop to review and edit before anything is saved, and handling the reality that the same risk or decision often gets discussed again the following week.
