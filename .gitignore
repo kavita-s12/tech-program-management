@@ -1,0 +1,26 @@
+# Old JSON output, leftover from before the Excel tracker migration
+extraction_output.json
+
+# Personal tracker data -- don't publish real meeting content to a public repo.
+# The sample transcripts + a fresh run of them are what demonstrate the tool.
+meeting_tracker.xlsx
+
+# Python cache/bytecode
+__pycache__/
+*.pyc
+
+# Virtual environments, if you ever create one
+venv/
+.venv/
+env/
+
+# Environment/secret files, in case you ever switch from $env: to a .env file
+.env
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/

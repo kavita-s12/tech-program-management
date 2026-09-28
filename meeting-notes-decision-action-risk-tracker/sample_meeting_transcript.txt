@@ -1,0 +1,51 @@
+Project: Atlas Platform Migration — Weekly Sync
+Date: September 3, 2026
+Attendees: Priya Nair (TPM), Marcus Chen (Eng Lead, Payments), Sara Ostrowski (Eng Lead, Infra), David Kim (Product Manager), Lena Alvarez (QA Lead)
+
+[00:00] Priya Nair: Alright, let's get started. Quick agenda today — migration status, the API rate limiting issue, QA timeline, and then the vendor contract renewal. Marcus, can you kick us off with payments?
+
+[00:15] Marcus Chen: Sure. We finished the core payment service migration to the new cluster last week. It's been stable in staging for four days now. The one open item is we're still seeing intermittent timeouts on the refund endpoint under load — happens maybe 1 in 200 requests.
+
+[00:45] Priya Nair: Is that a blocker for the production cutover on the 15th?
+
+[00:50] Marcus Chen: I don't think it should block us, but I want Sara's team to help profile it since it might be a networking issue on the new cluster, not our code.
+
+[01:05] Sara Ostrowski: Yeah, we can take a look. I'll have someone on my team pair with Marcus's team early next week to profile the refund endpoint.
+
+[01:15] Priya Nair: Okay, let's call that an action item — Sara, can you own getting someone assigned by Monday?
+
+[01:20] Sara Ostrowski: Yep, I'll assign David Osei from my team. He'll reach out to Marcus directly Monday morning.
+
+[01:30] Priya Nair: Great, noted. Sara, action item for you — assign David Osei to profile the refund endpoint timeout issue, target start Monday, September 8th.
+
+[01:45] Priya Nair: Moving on — Lena, where are we on QA sign-off?
+
+[01:50] Lena Alvarez: We've completed regression testing on the core flows. Still need to finish load testing, which depends on the refund endpoint issue being resolved since we don't want to load test against known bugs. I'd estimate we need three more days once that's fixed.
+
+[02:20] Priya Nair: So QA sign-off is now dependent on the refund fix. That's a real risk to the 15th launch date. Let's flag that.
+
+[02:30] David Kim: Agreed, that's worth calling out in the exec update. If the refund issue takes more than a couple days to diagnose, we should have a conversation about slipping the date rather than rushing QA.
+
+[02:50] Priya Nair: Good call. Let's make a decision now — we will not compress the QA load-testing window to hit the 15th. If the refund fix isn't resolved by September 10th, we push the cutover date and I'll communicate that to stakeholders.
+
+[03:10] David Kim: Agreed.
+
+[03:12] Marcus Chen: Agreed, that's the right call.
+
+[03:20] Priya Nair: Okay, decision logged. David, can you take the action item to draft the updated risk section for the exec update, mentioning this dependency?
+
+[03:30] David Kim: Yep, I'll have that drafted by end of day Friday.
+
+[03:40] Priya Nair: Perfect. Last topic — the vendor contract renewal for our monitoring tool. Legal flagged that the auto-renewal date is September 20th and we need to decide if we're renewing or evaluating alternatives.
+
+[04:00] Sara Ostrowski: My team has been happy with it, no complaints. I'd say renew.
+
+[04:10] Priya Nair: Any objections? ... Okay, hearing none — decision: we're renewing the monitoring tool contract. I'll send confirmation to Legal and procurement this week.
+
+[04:25] Priya Nair: Alright, that's everything on the agenda. Quick recap — Sara's assigning David Osei to the refund endpoint issue starting Monday, David Kim is drafting the risk section by Friday, and I'm sending the vendor renewal confirmation this week. We'll reassess the launch date on the 10th based on where the refund fix stands. Anything else before we close?
+
+[04:40] Lena Alvarez: Nothing from me.
+
+[04:42] Marcus Chen: All good.
+
+[04:45] Priya Nair: Great, thanks everyone. Talk next week.

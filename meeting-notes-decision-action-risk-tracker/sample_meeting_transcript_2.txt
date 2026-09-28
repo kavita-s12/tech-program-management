@@ -1,0 +1,49 @@
+Project: Atlas Platform Migration — Weekly Sync
+Date: September 10, 2026
+Attendees: Priya Nair (TPM), Marcus Chen (Eng Lead, Payments), Sara Ostrowski (Eng Lead, Infra), David Kim (Product Manager), Lena Alvarez (QA Lead)
+
+[00:00] Priya Nair: Alright, week two. Let's pick up where we left off — refund endpoint status, the launch date call we said we'd make today, and QA. Sara, where are we with the profiling?
+
+[00:15] Sara Ostrowski: David Osei dug into it most of last week. Turns out it is a networking issue on the new cluster, not application code — there's a misconfigured connection pool timeout. We have a fix identified but it needs to go through a config change process that takes a few days.
+
+[00:35] Marcus Chen: So we're looking at, what, Thursday or Friday before it's actually deployed and verified?
+
+[00:40] Sara Ostrowski: Realistically Friday. I don't want to rush a networking config change on a payments cluster.
+
+[00:50] Priya Nair: Right, agreed, let's not rush that. Okay — given that, we already said we'd revisit the launch date today if this wasn't resolved. It's not resolved. Decision: we're pushing the production cutover from the 15th to the 22nd.
+
+[01:10] David Kim: Agreed. That gives QA a real buffer too instead of a mad scramble.
+
+[01:15] Marcus Chen: Agreed, makes sense.
+
+[01:20] Priya Nair: Okay, decision logged — cutover moves to September 22nd. David, can you send the updated timeline to stakeholders? Say by end of day tomorrow.
+
+[01:35] David Kim: Yep, I'll get that out tomorrow.
+
+[01:40] Priya Nair: Lena, how's QA looking with the extra week?
+
+[01:45] Lena Alvarez: Much better honestly. We finished regression already. Once the refund fix lands Friday we'll do three days of load testing against it, then we should be in good shape for the 22nd with room to spare.
+
+[02:00] Priya Nair: Good. Let's flag one thing though — even with the buffer, there's still a risk if that networking fix introduces some other regression on the payments cluster, since it's a fairly invasive change. Worth watching.
+
+[02:15] Marcus Chen: Fair, we'll keep an eye on error rates closely after it deploys Friday.
+
+[02:25] Priya Nair: Okay. New item — David, with the new date, are we going to hear pushback from the exec stakeholders? Last time there was some appetite to just ship on the 15th regardless.
+
+[02:35] David Kim: Possibly. I'll include the networking root-cause explanation in the update so it's clear this wasn't just us being cautious — there was a real infra bug. I think that framing should land fine, but I can't promise nobody pushes back.
+
+[02:50] Priya Nair: Good call, include that context. Let's call that a risk to watch — possible stakeholder pushback on the new date, even with the technical justification.
+
+[03:00] Priya Nair: One more thing — procurement followed up asking if we finalized the monitoring tool renewal decision from last week. David, can you confirm with them it's a go and get the paperwork moving?
+
+[03:15] David Kim: I thought Priya was sending that confirmation directly? I don't have the procurement contact.
+
+[03:20] Priya Nair: Oh, right, I did already send that Monday. Never mind, that's done, scratch that.
+
+[03:30] Priya Nair: Okay, recap — cutover is now September 22nd, refund networking fix deploys Friday, David's sending the updated timeline tomorrow, and we're watching two things: potential regression from the networking change, and possible stakeholder pushback on the date. Anything else?
+
+[03:45] Lena Alvarez: Nothing from me.
+
+[03:47] Sara Ostrowski: All good here.
+
+[03:50] Priya Nair: Great, thanks everyone. Talk next week.
