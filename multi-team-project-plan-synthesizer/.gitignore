@@ -1,0 +1,13 @@
+# Generated review workbooks
+plan_review*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Secrets and editor files
+.env
+.vscode/
+.idea/
+~$*.xlsx
