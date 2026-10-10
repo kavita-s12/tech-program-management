@@ -14,7 +14,10 @@ Combines the separate project plans of a core team, a vendor, and any number of 
 
 ## Why these projects
 
-On Technical Delivery initiatives, the hard part is rarely a single project plan or a single meeting. It is the gaps: who owns a follow-up that was agreed out loud, or where two teams' plans are in conflict. These tools find those gaps quickly, so that people can speed through resolving them and spend their time on more productive work to keep the program on track.
+In technical delivery and process optimization initiatives, the primary challenge is rarely a single project plan or meeting. Instead, issues usually stem from gaps between cross-functional teams due to missed dependencies, conflicting priorities, and mismatched stakeholder plans. These tools identify those gaps efficiently, offering two key benefits:
+
+1. Save time for more productive work.
+2. Enable teams to proactively manage risks and address gaps before they impact delivery on the critical path.
 
 ## Tech
 
